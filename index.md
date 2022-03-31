@@ -10,7 +10,8 @@
 <a href="http://www.lxyddice.top/arknightshomework">明日方舟相关</a>
 <p><p>
 <a href="http://www.bilibili.com">看B站</a>
-<p>乐子赞助：大佐（YJR）<p>
+<p><p>
+<a href="http://www.lxyddice.top/bigzuoy">乐子赞助：大佐（YJR）</a>
   
 </body>
 </html>
