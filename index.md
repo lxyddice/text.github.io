@@ -13,7 +13,8 @@
 <a href="http://www.bilibili.com">看B站</a>
 <p><p>
 <a href="http://www.lxyddice.top/bigzuoy">乐子赞助：大佐（YJR）</a>
-
+<p><p>
+<a href="http://www.lxyddice.top/talka=1">杂谈#1（YJR）</a>
   
 </body>
 </html>
