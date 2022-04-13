@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none;
+            border: 1px solid pink
+        }
+        
+        li {
+            background-color: pink;
+            margin-top: 2px;
+            width: 630px;
+            height: auto;
+            line-height: 30px;
+        }
+        
+        p {
+            font-size: 15px;
+            margin-top: 0px;
+            float: left;
+        }
+        
+        button {
+            width: 50px;
+            height: 30px
+        }
+        
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+ 
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button class="btn">发布</button>
+    <ul>
+ 
+    </ul>
+    <script>
+        //点击发布按钮，获取文本域中的文本，给下面新创建li中的值
+        //获取文本框元素、按钮元素
+        var text = document.querySelector('textarea')
+        var btn = document.querySelector('.btn')
+        var ul = document.querySelector('ul')
+        console.log()
+ 
+        //当按下按钮后就创建新的li元素,放到ul的后面
+        btn.onclick = function() {
+            //创建li元素   因为是每按一次按钮，下面就会添加一个li，需要用到循环
+            //需要判断，当文本框里面的内容为空时，按下按钮是不会添加的
+            if (text.value != '') {
+                var li = document.createElement('li')
+                    //li里面创建一个p放内容
+                    // var p = document.createElement('p')
+                    // var dele = document.createElement('button')
+                    // ul.appendChild(li)
+                ul.insertBefore(li, ul.children[0])
+                    //在li里面添加p
+                    // console.log(ul.children[0])
+                    // ul.children[0].appendChild(p)
+                    //在li里面添加删除按钮
+                    // ul.children[0].appendChild(dele)
+ 
+                //添加节点
+                //赋值li里面的内容
+                li.innerHTML = text.value + "<a href='javascript:;'>删除</a>"
+                    // dele.innerHTML = '删除'
+                    // dele.style.float = 'right'
+                    //按下按钮后，文本框里面的值要清空
+                text.value = ''
+                    //删除元素，删除的是li,当前a链接的父亲
+                var as = document.querySelectorAll('a')
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function() {
+                        //node.removeChild(child)
+                        //  this.parentNode    li       父亲为ul
+                        ul.removeChild(this.parentNode)
+                    }
+                } //这个循环操作为什么放在按钮点击事件外面就不会起作用
+ 
+            }
+ 
+        }
+    </script>
+</body>
+ 
+</html>
