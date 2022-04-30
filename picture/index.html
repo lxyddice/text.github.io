@@ -1,21 +1,27 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>菜鸟教程(runoob.com)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题</title>
+<script type="text/javascript">
+function setContent(){
+var content = prompt("请输入","");
+if (content!=null&&content!="") {
+document.getElementById("text").value = content;
+};
+}
+function clearContent(){
+document.getElementById("text").value = "";
+}
+function jumpUrl(){
+var jumpUrl = document.getElementById("text").value;
+location.href = jumpUrl;
+}
+</script>
 </head>
 <body>
-
-<input id="address" type="text" value="" placeholder="请输入地址">
-<button id="serach">搜索</button>
-<script>
-    window.onload=function(){
-        var link=document.getElementById("address").value;
-        var serach=document.getElementById("serach");
-        serach.onclick=function(){
-            location.href=link;
-        }
-    }
-</script>
+<input type="button" value="请输入" id="setContent" onclick="setContent()" />
+<input type="button" value="清除" id="clearContent" onclick="clearContent()" />
+<input type="text" name="text" id="text" />
+<input type="button" value="go" onclick="jumpUrl()" />
 </body>
-</html
+</html>
