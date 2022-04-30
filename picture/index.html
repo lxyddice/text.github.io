@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Document</title>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
 </head>
 <body>
-<input type="text" id="input">
-<button id="button">Submit</button>
+
+<input id="address" type="text" value="" placeholder="请输入地址">
+<button id="serach">搜索</button>
 <script>
-var url="";
-$("#button").click(function(){
-url=$("#input").val();
-window.location.href=url;
-})
+    window.onload=function(){
+        var link=document.getElementById("address").value;
+        var serach=document.getElementById("serach");
+        serach.onclick=function(){
+            location.href=link;
+        }
+    }
 </script>
 </body>
-</html>
+</html
